@@ -56,7 +56,7 @@ class StyleguideViewHelper extends AbstractViewHelper
             ->withPath($prefix . $arguments['action'])
             ->withQuery(http_build_query($arguments['arguments']))
             ->withFragment($arguments['section'])
-            ->withPort(GeneralUtility::getIndpEnv('TYPO3_PORT') ?: null);
+            ->withPort((int)GeneralUtility::getIndpEnv('TYPO3_PORT') ?: null);
     }
 
     /**
